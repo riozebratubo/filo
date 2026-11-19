@@ -6,6 +6,10 @@ Filo is one small `.exe`, no need to install it and it needs no runtime. It open
 
 <!-- screenshot: docs/filo.png -->
 
+## Download
+
+Get it here: https://github.com/riozebratubo/filo/releases/download/1.0.0/filo.exe.
+
 ---
 
 ## At a glance
