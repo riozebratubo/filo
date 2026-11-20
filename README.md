@@ -1,14 +1,14 @@
 # Filo
 
-**A fast, lean file explorer for Windows.**
+**Fi-lo because qui-lo. A fast, lean file explorer for Windows.**
 
-Filo is one small `.exe`, no need to install it and it needs no runtime. It opens a folder with half a million files without stopping to think, and it adds the things Windows Explorer never got: undo for every file operation, a copy queue that knows your disks, batch rename, your own commands on a hotkey, and fast phone browsing that you can cancel.
+Filo is one small `.exe`, no need to install it and it needs no runtime. It opens a folder with half a million files in an instant, has undo for every file operation, a copy queue that knows your disks, batch rename, your own commands triggered by hotkeys and fast phone browsing that you can cancel. The last one alone may restore your love for Android.
 
 <!-- screenshot: docs/filo.png -->
 
 ## Download
 
-Get it here: https://github.com/riozebratubo/filo/releases/download/1.0.0/filo.exe.
+Get it here: https://github.com/riozebratubo/filo/releases/download/1.0.1/filo.exe.
 
 ---
 
@@ -16,34 +16,32 @@ Get it here: https://github.com/riozebratubo/filo/releases/download/1.0.0/filo.e
 
 |                                                              | **Filo** | Windows Explorer | The other lean and fast alternative |
 | ------------------------------------------------------------ | :------: | :--------------: | :---------------------------------: |
-| One small portable `.exe`, no installer                      | ✅ ~3 MB | ❌ part of Windows | ✅ |
-| Huge folders (500,000 files) open with no lag                | ✅ | ❌ | ✅ |
-| Folder sizes in the list, chosen per SSD / HDD / network     | ✅ | ❌ | ✅ |
-| Type to filter, with partial letters (`dcmn` → `documents`)  | ✅ | ❌ | ✅ |
-| Undo **and redo** of every file operation, across all windows | ✅ | ⚠️ limited | ❌ |
+| One small portable `.exe`                      | ✅ ~3 MB | ❌ part of Windows | ✅ |
+| Huge folders opens with no lag                | ✅ | ❌ | ✅ |
+| Folder sizes in the list, chosen per SSD / HDD     | ✅ | ❌ | ✅ |
+| Type to filter with partial letters   | ✅ | ❌ | ✅ |
+| Undo **and redo** of every file operation | ✅ | ⚠️ limited | ❌ |
 | Batch rename: tokens, regex, case, live preview              | ✅ | ❌ | ✅ |
-| Run your own programs on the selection, by hotkey                | ✅ | ❌ | ❌ |
-| Edit dates and attributes of many items at once              | ✅ | ❌ | ❌ |
-| Copies queued per physical disk, with pause and reorder      | ✅ | ❌ | ❌ |
-| Phones and cameras (MTP) read by its own engine, fast and cancellable | ✅ | ❌ | ❌ |
+| Run your own programs on the selection by hotkey                | ✅ | ❌ | ❌ |
+| Edit dates and attributes of files              | ✅ | ❌ | ❌ |
+| Copies queued per physical disk with pause and reorder      | ✅ | ❌ | ❌ |
+| Phones and cameras (MTP) working fast and you can cancel operations | ✅ | ❌ | ❌ |
 
 ---
 
 ## Why use Filo?
 
-### Filo if fast where it counts
+### Filo is really fast
 
-- **Folders are read through the NT directory API** on a worker thread, a 502,000-item folder read and sort measured 345 ms. The window keeps drawing the whole time.
-- **Changes show up quickly as they happen.** Each window watches its folder and applies new, removed and renamed items in place. Your selection and scroll position don't move.
-- **Folder sizes add themselves up** in the background for the folder you're looking at. They stay up to date as things change, and you choose where it happens: SSDs, hard disks, network shares.
-- **One process for every window.** Starting `filo.exe` again just asks the running one for a new window, so a new window appears at once.
-- **The shell's slow parts stay out of your way.** Filo has its own context menu, which opens instantly. Windows' full menu is one click away ("More options", or Shift+right-click) and runs in parallel, so a slow shell extension never freezes the list.
+- **Folders are read through the NT directory API** on a worker thread, Filo windows are responsive the whole time
+- **Changes show up quickly** Each window watches its folder and applies new, removed and renamed items in place, not affecting your selection and scroll position
+- **Folder sizes all the time (when we can)** in the background for the folder you're looking at. They stay up to date as things change and you can choose where it happens: SSDs, hard disks, network shares
+- **One process for all the windows** A new window opens quickly when you need it
 
-### Search the way you type
+### Search just by typing
 
-- **Just type.** Typing in a folder filters it. Full matches come first, then partial ones, where the letters only have to appear in order. The matched letters are highlighted.
-- **Look in subfolders** with one click. The walk is parallel and streams results while it runs. The next keystroke cancels it, and no index is needed.
-- **Command palette.** `Ctrl+P` goes to any recent, pinned or typed folder. `Ctrl+Shift+P` finds any action, command or setting.
+- **Just type** Typing in a folder filters it. Full matches come first, then partial ones, where the letters only have to appear in order. The matched letters are highlighted
+- **Need better searching? Just `Ctrl+f`** You can now search subfolders and have more control
 
 ### File operations you can trust
 
